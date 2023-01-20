@@ -1,0 +1,207 @@
+.header-library {
+  min-width: 320px;
+  height: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 44px;
+  padding-bottom: 62px;
+
+  background-color: #000000;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('../images/header-bg-library-mob.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('../images/header-bg-library-mob2@x.jpg');
+  }
+
+  @include tablet {
+    height: 219px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('../images/header-bg-library-tab.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        ),
+        url('../images/header-bg-library-tab2@x.jpg');
+    }
+  }
+
+  @include desktop {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('../images/header-bg-library-desk.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        ),
+        url('../images/header-bg-library-desk2@x.jpg');
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+}
+
+.logo__header-icon {
+  rotate: 0deg;
+  fill: transparent;
+  stroke: currentColor;
+  //   color: currentColor;
+  transition: stroke var(--time) var(--function-animate),
+    rotate var(--time) var(--function-animate);
+
+  .logo__link:hover &,
+  .logo__link:focus & {
+    rotate: 180deg;
+    fill: transparent;
+    stroke: var(--accent-color);
+  }
+}
+
+.logo__title {
+  display: none;
+
+  @include tablet {
+    font-family: inherit;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.17;
+    margin-left: 8px;
+    color: var(--primary-text-color);
+  }
+
+  @include desktop {
+    margin-left: 10px;
+  }
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-list__item {
+  position: relative;
+}
+
+.nav-list__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav-list__link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+}
+
+.nav-list__link.current::after {
+  content: '';
+  background-color: var(--current-color);
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.btn__list {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+
+  @include tablet {
+    margin-top: 40px;
+  }
+}
+
+.btn__item:not(:last-child) {
+  margin-right: 20px;
+
+  @include tablet {
+    min-width: 32px;
+  }
+  @include desktop {
+    min-width: 16px;
+  }
+}
+
+.btn__watched,
+.btn__queue {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  min-width: 130px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  background-color: transparent;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 5px;
+
+  @include tablet {
+    min-width: 152px;
+  }
+  @include desktop {
+    min-width: 148px;
+  }
+}
+
+.is-active {
+  background: var(--accent-color);
+  border-radius: 5px;
+  border: none;
+}

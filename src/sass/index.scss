@@ -1,2 +1,32 @@
-@import './common';
-@import './example';
+@import './utils/common';
+@import './utils/reset';
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/breakpoints';
+@import './utils/body';
+@import './utils/container';
+@import './utils/util-classes';
+
+@import './components/film-card';
+@import './components/filter';
+@import './components/modal-film';
+@import './components/modal-team';
+// @import './components/modal-trailer';
+@import './components/header-main';
+@import './components/hero-main';
+@import './components/header-library';
+@import './components/hero-library';
+@import './components/spinner';
+@import './components/up-btn';
+@import './components/pagination';
+@import './components/play_trailer_btn';
+@import './components/user-auth';
+@import './components/footer';
+
+//Slider
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+@import './components/film-slider';
+
+// Custom scrollbar:
+@import 'perfect-scrollbar/css/perfect-scrollbar';
+@import './components/theme-switch';

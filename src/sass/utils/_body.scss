@@ -1,0 +1,48 @@
+body {
+  background-color: var(--primery-bg-color);
+  color: var(--primery-text-color);
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.btn {
+  cursor: pointer;
+  color: var(--primary-text-color);
+  background-color: transparent;
+
+  transition: color var(--time) var(--function-animate),
+    background-color var(--time) var(--function-animate),
+    border var(--time) var(--function-animate);
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--primary-text-color);
+  background-color: var(--accent-color);
+  border: var(--accent-color);
+}
+
+.link {
+  transition: color var(--time) var(--function-animate);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+.hero {
+background: radial-gradient(circle, rgba(203,198,198,1) 0%, rgba(148,146,146,1) 0%, rgba(207,215,207,1) 59%, rgba(165,166,165,0.9585084033613446) 87%);
+  // background-color: 
+  // background-image: linear-gradient(0deg, #929292cc, #f7f7f7c7),
+  //   url('../images/hero-bg.jpg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  // text-align: center;
+  // min-height: 100vw;
+}
+
+button {
+  cursor: pointer;
+}

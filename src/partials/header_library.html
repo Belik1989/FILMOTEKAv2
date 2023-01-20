@@ -1,0 +1,59 @@
+<header class="header-library">
+  <div class="container-filmoteka">
+    <nav class="nav">
+      <a class="logo__link link" href="./index.html"
+        ><svg class="logo__header-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-filmoteka"></use></svg
+        ><span class="logo__title">Filmoteka</span>
+      </a>
+      <ul class="nav-list list">
+        <li class="nav-list__item">
+          <a class="nav-list__link link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link link btn2 current" href="./page_library.html"
+            >my library</a
+          >
+        </li>
+        <li class="nav-list__item">
+          <a
+            id="auth"
+            href="#registration"
+            class="header-main__btn"
+            aria-label="sign in"
+          >
+            <svg class="header__registration-icon" width="32" height="32">
+              <use
+                href="./images/icons.svg#icon-account"
+                class="header-main__svg"
+              ></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="day-nigth-btn-box">
+      <span class="day">
+        <svg class="day-icon">
+          <use href="./images/icons.svg#icon-sun"></use></svg
+      ></span>
+      <a href="#" class="themetoggle" aria-label="theme of page">
+        <span class="material-icons"></span
+      ></a>
+      <span class="night">
+        <svg class="night-icon">
+          <use href="./images/icons.svg#icon-moon"></use></svg
+      ></span>
+    </div>
+    <ul class="btn__list list">
+      <li class="btn__item">
+        <button class="btn__watched btn is-active" type="button">
+          Watched
+        </button>
+      </li>
+      <li class="btn__item">
+        <button class="btn__queue btn" type="button">queue</button>
+      </li>
+    </ul>
+  </div>
+</header>
